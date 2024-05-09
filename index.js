@@ -89,7 +89,7 @@ app.get('/academicians', (req, res) => {
         });
 });
 
-const port = 3000;
-app.listen(port, () => {
-    console.log('Listening on port ' + port);
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}...`);
 });
