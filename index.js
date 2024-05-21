@@ -1,8 +1,10 @@
 const express = require('express');
 const {v4} = require('uuid');
+var cors = require('cors')
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 var admin = require("firebase-admin");
 var serviceAccount = require("./service-account.json");
